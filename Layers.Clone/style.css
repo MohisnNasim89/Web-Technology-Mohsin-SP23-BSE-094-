@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
 body {
     margin: 0;
 }
 
 .nav-bar {
+    height: 60px;
+    width: 100%;
+    font-family: "Heebo";
+    font-weight: 500;
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFF2E2;
-    padding: 10px 20px;
+    align-content: center;
+    background-color: #ffffff;
+    opacity: 0.9;
+    /* padding: 7px 20px; */
+    position: relative;
 }
 
 .menu-left, .menu-right {
@@ -24,25 +34,26 @@ body {
 }
 
 .menu li {
-    padding: 0 15px;
+    padding: 18px; 
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .menu li a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
 }
 
 .menu-left a {
     background-color: #B09C6D;
     color: #FFF;
-    padding-left: 2.5em;
-    padding-right: 2.5em;
-    padding-top: 0.85em;
-    padding-bottom: 0.85em;
-    border-radius: 1.2em;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0.75vw;
+    padding-bottom: 0.75em;
+    border-radius: 1.5em;
     text-decoration: none;
-    margin-left: 1em;
+    margin-left: 2.5em;
 }
 
 .menu-right a {
@@ -50,11 +61,11 @@ body {
 }
 
 .menu-right{
-    margin-right: 2em;
+    margin-right: 2.5em;
 }
 
-.menu-right img, .logo img {
-    height: 20px;
+.menu-right img{
+    height: 21px;
 }
 
 #logo{
@@ -83,6 +94,16 @@ body {
 
 .logos img{
     display: flex;
-    align-items: center;
-    align-content: center;
+    padding: 0.25em;
+}
+
+.slider-image img{
+    width: 100vw;
+}
+
+#order-online img{
+    width: 10em;
+    position: fixed;
+    bottom: 15em;
+    margin-left: 3em;
 }
