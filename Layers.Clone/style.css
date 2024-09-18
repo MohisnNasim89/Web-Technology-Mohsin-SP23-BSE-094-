@@ -17,7 +17,7 @@ body {
     background-color: #ffffff;
     opacity: 0.9;
     /* padding: 7px 20px; */
-    position: relative;
+    position: sticky;
 }
 
 .menu-left, .menu-right {
