@@ -332,6 +332,101 @@ body {
     z-index: 2;
 }
 
+.bars{
+    display: flex;
+    flex-direction: row;
+}
+
+.side-img{
+    width: 50%;
+}
+.side-img img{
+}
+
+.container {
+    width: 50%;
+}
+
+.bestselling-cakes {
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #e39d5c;
+    font-style: italic;
+}
+
+.cakes-wrapper {
+    display: flex;
+}
+
+.cake {
+    width: 300px;
+    height: auto;
+    flex: 1;
+    text-align: center;
+}
+
+.cake img {
+    width: 281px;
+    height: auto;
+    object-fit: cover;
+}
+
+.cake-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.cake-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #777;
+}
+
+.cake-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 1.25rem;
+    color: #e39d5c;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    background-color: #e39d5c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.quantity-control button:hover {
+    background-color: #d18d4e;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .slider-image {
