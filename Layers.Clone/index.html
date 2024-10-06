@@ -31,7 +31,7 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
         <div class="menu-right">
-            <a class="logos"><img src="/assets/search.svg" alt="Search"></a>
+            <a class="logos" href=""><img src="/assets/search.svg" alt="Search"></a>
             <a class="logos" href="#"><img src="/assets/user.svg" alt="Account"></a>
             <a class="logos" href="#"><img src="/assets/wishlist-heart_13085569.svg" alt="Wishlist"></a>
             <a class="logos" href="#"><img src="/assets/cart-shopping-fast_9795508.svg" alt="Cart"></a>
@@ -68,7 +68,7 @@
             </div>
         </div>
     </div>
-
+    <!-- intro -->
     <div class="introduction .section-with-gradient">
         <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 283.5 27.8"
             preserveAspectRatio="xMidYMax slice">
@@ -80,7 +80,7 @@
         <div class="intro-content">
 
             <div class="intro-text">
-                <span id="intro-to">----------- &nbsp;&nbsp; INTRODUCING OUR</span>
+                <span class="intro-to">----------- &nbsp;&nbsp; INTRODUCING OUR</span>
                 <h1 id="wide-variety">Wide Variety of</h1>
                 <h1 id="cakes">Delicious Cakes</h1>
 
@@ -102,46 +102,265 @@
         <div class="side-img">
             <img src="/assets/ferrero-hp-2.jpg" alt="">
         </div>
-        <section class="bestselling-cakes"></section>
         <div class="container">
             <h2 class="section-title">Bestselling <span>Cakes</span></h2>
             <div class="cakes-wrapper">
                 <!-- First Cake -->
                 <div class="cake">
                     <img src="/assets/Three-Milk-Cake.jpg" alt="Three Milk Cake">
-                    <h3 class="cake-title">Three Milk Cake</h3>
+                    <a class="cake-title" href="">
+                        <h3>Three Milk Cake</h3>
+                    </a>
                     <p class="cake-description">Vanilla sponge cake in three kinds of milk; Whole milk, Evaporated
                         milk, and Condensed milk!</p>
                     <div class="cake-price">
                         <span class="price">Rs 2,200</span>
                         <div class="quantity-control">
-                            <button>-</button>
-                            <input type="number" value="1" min="1">
-                            <button>+</button>
+                            <span class="increment">-</span>
+                            <input type="number" value="1" min="1" class="custom-input">
+                            <span class="increment">+</span>
                         </div>
+                        <button class="add-to-cart">Add to cart</button>
                     </div>
                 </div>
                 <!-- Second Cake -->
                 <div class="cake">
                     <img src="/assets/Lotus-768x768.jpg" alt="Lotus Cake">
-                    <h3 class="cake-title">Lotus Cake</h3>
+                    <a href="" class="cake-title">
+                        <h3>Lotus Cake</h3>
+                    </a>
                     <p class="cake-description">Lotus biscoff spread with cream cheese on a fluffy vanilla sponge
                         and crushed lotus biscuits on top.</p>
                     <div class="cake-price">
                         <span class="price">Rs 2,900</span>
                         <div class="quantity-control">
-                            <button>-</button>
-                            <input type="number" value="1" min="1">
-                            <button>+</button>
+                            <span class="increment">-</span>
+                            <input type="number" value="1" min="1" class="custom-input">
+                            <span class="increment">+</span>
                         </div>
+                        <button class="add-to-cart">Add to cart</button>
                     </div>
                 </div>
             </div>
         </div>
-        </section>
     </div>
 
+    <!-- Reverse order bar -->
+    <div class="bars reverse-order">
+        <div class="container">
+            <h2 class="section-title">Bestselling <span>Deserts</span></h2>
+            <div class="cakes-wrapper">
+                <div class="cake">
+                    <img src="/assets/Lotus-cheesecake-9-768x768.jpg" alt="Chocolate Cake">
+                    <a class="cake-title" href="">
+                        <h3>Lotus Cheese Cake</h3>
+                    </a>
+                    <p class="cake-description">Speculoos spread on top of baked NYC style cheese cake with another
+                        layer over the crust
+                    </p>
+                    <div class="cake-price">
+                        <span class="price">Rs 450</span>
+                    </div>
+                </div>
+                <div class="cake">
+                    <img src="/assets/Apple-pie-1-768x768.jpg" alt="Red Velvet Cake">
+                    <a href="" class="cake-title">
+                        <h3>Apple Cup Pie</h3>
+                    </a>
+                    <p class="cake-description">Crunchy cookie crust with a filling of Apple, Cinnamon, Nutmeg & Lemon
+                        juice!</p>
+                    <div class="cake-price">
+                        <span class="price">Rs 250</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-img">
+            <img src="/assets/chocolate-chunk-cookie-1.jpg" alt="">
+        </div>
+    </div>
 
+    <div class="bars">
+        <div class="side-img">
+            <img src="/assets/1.1.jpg" alt="">
+        </div>
+        <div class="container">
+            <h2 class="section-title">Bestselling <span>Cupcakes</span></h2>
+            <div class="cakes-wrapper">
+                <!-- First Cake -->
+                <div class="cake">
+                    <img src="/assets/Salted-Caramel-Cupcake-768x768.jpg" alt="Three Milk Cake">
+                    <a class="cake-title" href="">
+                        <h3>Salted Caramel Cupcake</h3>
+                    </a>
+                    <p class="cake-description">
+                        Salted caramel, Crème cheese & moist vanilla sponge!
+                    </p>
+                    <div class="cake-price">
+                        <span class="price">Rs 250</span>
+                    </div>
+                </div>
+                <!-- Second Cake -->
+                <div class="cake">
+                    <img src="/assets/MM-768x768.jpg" alt="Lotus Cake">
+                    <a href="" class="cake-title">
+                        <h3>M&M Cupcake</h3>
+                    </a>
+                    <p class="cake-description">
+                        Crème milk chocolate with M&M's crushed inside!
+                    </p>
+                    <div class="cake-price">
+                        <span class="price">Rs 250</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bars reverse-order">
+        <div class="container">
+            <h2 class="section-title">Enjoy your <span>Sundae</span></h2>
+            <div class="cakes-wrapper">
+                <div class="cake">
+                    <img src="/assets/Hazelnut-Parfait.jpg" alt="Chocolate Cake">
+                    <a class="cake-title" href="">
+                        <h3>Hazelnut Parfait</h3>
+                    </a>
+                    <p class="cake-description">Layers of hazelnut chunks, Caramalized short bread crumbs blended with
+                        hazelnut cream ganache
+                    </p>
+                    <div class="cake-price">
+                        <span class="price">Rs 520</span>
+                    </div>
+                </div>
+                <div class="cake">
+                    <img src="/assets/Pistachio.jpg" alt="Red Velvet Cake">
+                    <a href="" class="cake-title">
+                        <h3>Pistachio Tres Leches Sundae</h3>
+                    </a>
+                    <p class="cake-description">
+                        Pistachio Tres Leches: Premium pistachio spread over layers of tres leches and a hint of Belgian
+                        chocolate in the bottom.
+                    </p>
+                    <div class="cake-price">
+                        <span class="price">Rs 520</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-img">
+            <img src="/assets/2.1.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="app-download-section">
+        <svg class="cream" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 283.5 27.8"
+            preserveAspectRatio="xMidYMax slice">
+            <path class="elementor-shape-fill"
+                d="M0 0v1.4c.6.7 1.1 1.4 1.4 2 2 3.8 2.2 6.6 1.8 10.8-.3 3.3-2.4 9.4 0 12.3 1.7 2 3.7 1.4 4.6-.9 1.4-3.8-.7-8.2-.6-12 .1-3.7 3.2-5.5 6.9-4.9 4 .6 4.8 4 4.9 7.4.1 1.8-1.1 7 0 8.5.6.8 1.6 1.2 2.4.5 1.4-1.1.1-5.4.1-6.9.1-3.7.3-8.6 4.1-10.5 5-2.5 6.2 1.6 5.4 5.6-.4 1.7-1 9.2 2.9 6.3 1.5-1.1.7-3.5.5-4.9-.4-2.4-.4-4.3 1-6.5.9-1.4 2.4-3.1 4.2-3 2.4.1 2.7 2.2 4 3.7 1.5 1.8 1.8 2.2 3 .1 1.1-1.9 1.2-2.8 3.6-3.3 1.3-.3 4.8-1.4 5.9-.5 1.5 1.1.6 2.8.4 4.3-.2 1.1-.6 4 1.8 3.4 1.7-.4-.3-4.1.6-5.6 1.3-2.2 5.8-1.4 7 .5 1.3 2.1.5 5.8.1 8.1s-1.2 5-.6 7.4c1.3 5.1 4.4.9 4.3-2.4-.1-4.4-2-8.8-.5-13 .9-2.4 4.6-6.6 7.7-4.5 2.7 1.8.5 7.8.2 10.3-.2 1.7-.8 4.6.2 6.2.9 1.4 2 1.5 2.6-.3.5-1.5-.9-4.5-1-6.1-.2-1.7-.4-3.7.2-5.4 1.8-5.6 3.5 2.4 6.3.6 1.4-.9 4.3-9.4 6.1-3.1.6 2.2-1.3 7.8.7 8.9 4.2 2.3 1.5-7.1 2.2-8 3.1-4 4.7 3.8 6.1 4.1 3.1.7 2.8-7.9 8.1-4.5 1.7 1.1 2.9 3.3 3.2 5.2.4 2.2-1 4.5-.6 6.6 1 4.3 4.4 1.5 4.4-1.7 0-2.7-3-8.3 1.4-9.1 4.4-.9 7.3 3.5 7.8 6.9.3 2-1.5 10.9 1.3 11.3 4.1.6-3.2-15.7 4.8-15.8 4.7-.1 2.8 4.1 3.9 6.6 1 2.4 2.1 1 2.3-.8.3-1.9-.9-3.2 1.3-4.3 5.9-2.9 5.9 5.4 5.5 8.5-.3 2-1.7 8.4 2 8.1 6.9-.5-2.8-16.9 4.8-18.7 4.7-1.2 6.1 3.6 6.3 7.1.1 1.7-1.2 8.1.6 9.1 3.5 2 1.9-7 2-8.4.2-4 1.2-9.6 6.4-9.8 4.7-.2 3.2 4.6 2.7 7.5-.4 2.2 1.3 8.6 3.8 4.4 1.1-1.9-.3-4.1-.3-6 0-1.7.4-3.2 1.3-4.6 1-1.6 2.9-3.5 5.1-2.9 2.5.6 2.3 4.1 4.1 4.9 1.9.8 1.6-.9 2.3-2.1 1.2-2.1 2.1-2.1 4.4-2.4 1.4-.2 3.6-1.5 4.9-.5 2.3 1.7-.7 4.4.1 6.5.6 1.5 2.1 1.7 2.8.3.7-1.4-1.1-3.4-.3-4.8 1.4-2.5 6.2-1.2 7.2 1 2.3 4.8-3.3 12-.2 16.3 3 4.1 3.9-2.8 3.8-4.8-.4-4.3-2.1-8.9 0-13.1 1.3-2.5 5.9-5.7 7.9-2.4 2 3.2-1.3 9.8-.8 13.4.5 4.4 3.5 3.3 2.7-.8-.4-1.9-2.4-10 .6-11.1 3.7-1.4 2.8 7.2 6.5.4 2.2-4.1 4.9-3.1 5.2 1.2.1 1.5-.6 3.1-.4 4.6.2 1.9 1.8 3.7 3.3 1.3 1-1.6-2.6-10.4 2.9-7.3 2.6 1.5 1.6 6.5 4.8 2.7 1.3-1.5 1.7-3.6 4-3.7 2.2-.1 4 2.3 4.8 4.1 1.3 2.9-1.5 8.4.9 10.3 4.2 3.3 3-5.5 2.7-6.9-.6-3.9 1-7.2 5.5-5 4.1 2.1 4.3 7.7 4.1 11.6 0 .8-.6 9.5 2.5 5.2 1.2-1.7-.1-7.7.1-9.6.3-2.9 1.2-5.5 4.3-6.2 4.5-1 7.7 1.5 7.4 5.8-.2 3.5-1.8 7.7-.5 11.1 1 2.7 3.6 2.8 5 .2 1.6-3.1 0-8.3-.4-11.6-.4-4.2-.2-7 1.8-10.8 0 0-.1.1-.1.2-.2.4-.3.7-.4.8v.1c-.1.2-.1.2 0 0v-.1l.4-.8c0-.1.1-.1.1-.2.2-.4.5-.8.8-1.2V0H0zM282.7 3.4z">
+            </path>
+        </svg>
+
+        <div class="app-container">
+            <div class="app-text">
+                <span class="intro-to app-intro">----------- &nbsp;&nbsp; DOWNLOAD APP FOR</span>
+                <h1 class="ios">iOS and</h1>
+                <h1 class="android">Android</h1>
+                <p>
+                    Download our new app to place orders instantly on the go! Also stay updated to our latest offers & promotions!
+                </p>
+            </div>
+        </div>
+
+        <div class="app-image">
+            <img src="/assets/bike.svg" alt="Delivery Scooter" class="scooter-img">
+        </div>
+
+        <div class="app-buttons">
+            <a href="">
+                <img src="assets/iOS.png" alt="App Store" class="store-btn">
+            </a>
+
+            <a href="">
+                <img src="/assets/Google-Play.png" alt="Google Play" class="store-btn">
+            </a>
+        </div>
+
+        <div class="free-delivery-text">
+            <h2>Free Delivery <span>on App Order</span></h2>
+        </div>
+
+        <!-- hello -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="app-footer">
+            <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
+            <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
+            <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+        </svg>
+    </div>
+
+    <div class="valued-customers">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="app-footer testi-img">
+            <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
+            <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
+            <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+        </svg>
+
+        <div class="container">
+            <h2 class="section-title">Our Valued <span>Customers</span></h2>
+
+            <img src="/assets/Testomonial-1.png" alt="" srcset="">
+
+        </div>
+    </div>
+    <div class="valued-customers-svg">
+        <svg class="test-cream" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 283.5 27.8"
+        preserveAspectRatio="xMidYMax slice">
+        <path class="elementor-shape-fill"
+            d="M0 0v1.4c.6.7 1.1 1.4 1.4 2 2 3.8 2.2 6.6 1.8 10.8-.3 3.3-2.4 9.4 0 12.3 1.7 2 3.7 1.4 4.6-.9 1.4-3.8-.7-8.2-.6-12 .1-3.7 3.2-5.5 6.9-4.9 4 .6 4.8 4 4.9 7.4.1 1.8-1.1 7 0 8.5.6.8 1.6 1.2 2.4.5 1.4-1.1.1-5.4.1-6.9.1-3.7.3-8.6 4.1-10.5 5-2.5 6.2 1.6 5.4 5.6-.4 1.7-1 9.2 2.9 6.3 1.5-1.1.7-3.5.5-4.9-.4-2.4-.4-4.3 1-6.5.9-1.4 2.4-3.1 4.2-3 2.4.1 2.7 2.2 4 3.7 1.5 1.8 1.8 2.2 3 .1 1.1-1.9 1.2-2.8 3.6-3.3 1.3-.3 4.8-1.4 5.9-.5 1.5 1.1.6 2.8.4 4.3-.2 1.1-.6 4 1.8 3.4 1.7-.4-.3-4.1.6-5.6 1.3-2.2 5.8-1.4 7 .5 1.3 2.1.5 5.8.1 8.1s-1.2 5-.6 7.4c1.3 5.1 4.4.9 4.3-2.4-.1-4.4-2-8.8-.5-13 .9-2.4 4.6-6.6 7.7-4.5 2.7 1.8.5 7.8.2 10.3-.2 1.7-.8 4.6.2 6.2.9 1.4 2 1.5 2.6-.3.5-1.5-.9-4.5-1-6.1-.2-1.7-.4-3.7.2-5.4 1.8-5.6 3.5 2.4 6.3.6 1.4-.9 4.3-9.4 6.1-3.1.6 2.2-1.3 7.8.7 8.9 4.2 2.3 1.5-7.1 2.2-8 3.1-4 4.7 3.8 6.1 4.1 3.1.7 2.8-7.9 8.1-4.5 1.7 1.1 2.9 3.3 3.2 5.2.4 2.2-1 4.5-.6 6.6 1 4.3 4.4 1.5 4.4-1.7 0-2.7-3-8.3 1.4-9.1 4.4-.9 7.3 3.5 7.8 6.9.3 2-1.5 10.9 1.3 11.3 4.1.6-3.2-15.7 4.8-15.8 4.7-.1 2.8 4.1 3.9 6.6 1 2.4 2.1 1 2.3-.8.3-1.9-.9-3.2 1.3-4.3 5.9-2.9 5.9 5.4 5.5 8.5-.3 2-1.7 8.4 2 8.1 6.9-.5-2.8-16.9 4.8-18.7 4.7-1.2 6.1 3.6 6.3 7.1.1 1.7-1.2 8.1.6 9.1 3.5 2 1.9-7 2-8.4.2-4 1.2-9.6 6.4-9.8 4.7-.2 3.2 4.6 2.7 7.5-.4 2.2 1.3 8.6 3.8 4.4 1.1-1.9-.3-4.1-.3-6 0-1.7.4-3.2 1.3-4.6 1-1.6 2.9-3.5 5.1-2.9 2.5.6 2.3 4.1 4.1 4.9 1.9.8 1.6-.9 2.3-2.1 1.2-2.1 2.1-2.1 4.4-2.4 1.4-.2 3.6-1.5 4.9-.5 2.3 1.7-.7 4.4.1 6.5.6 1.5 2.1 1.7 2.8.3.7-1.4-1.1-3.4-.3-4.8 1.4-2.5 6.2-1.2 7.2 1 2.3 4.8-3.3 12-.2 16.3 3 4.1 3.9-2.8 3.8-4.8-.4-4.3-2.1-8.9 0-13.1 1.3-2.5 5.9-5.7 7.9-2.4 2 3.2-1.3 9.8-.8 13.4.5 4.4 3.5 3.3 2.7-.8-.4-1.9-2.4-10 .6-11.1 3.7-1.4 2.8 7.2 6.5.4 2.2-4.1 4.9-3.1 5.2 1.2.1 1.5-.6 3.1-.4 4.6.2 1.9 1.8 3.7 3.3 1.3 1-1.6-2.6-10.4 2.9-7.3 2.6 1.5 1.6 6.5 4.8 2.7 1.3-1.5 1.7-3.6 4-3.7 2.2-.1 4 2.3 4.8 4.1 1.3 2.9-1.5 8.4.9 10.3 4.2 3.3 3-5.5 2.7-6.9-.6-3.9 1-7.2 5.5-5 4.1 2.1 4.3 7.7 4.1 11.6 0 .8-.6 9.5 2.5 5.2 1.2-1.7-.1-7.7.1-9.6.3-2.9 1.2-5.5 4.3-6.2 4.5-1 7.7 1.5 7.4 5.8-.2 3.5-1.8 7.7-.5 11.1 1 2.7 3.6 2.8 5 .2 1.6-3.1 0-8.3-.4-11.6-.4-4.2-.2-7 1.8-10.8 0 0-.1.1-.1.2-.2.4-.3.7-.4.8v.1c-.1.2-.1.2 0 0v-.1l.4-.8c0-.1.1-.1.1-.2.2-.4.5-.8.8-1.2V0H0zM282.7 3.4z">
+        </path>
+        </svg>
+    </div>
+
+    <div class="indulge-section">
+        <div class="container">
+            <div class="left-image">
+                <img src="/assets/dream.png" alt="Honey Pouring on Cake" class="decorative-img">
+            </div>
+
+            <h2 class="section-heading">
+                Indulge Yourself into The<br> 
+                <span>Glimpse Of Heaven</span>
+            </h2>
+            
+            <div class="video-and-images">
+                <div class="youtube-video">
+                    <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/v1diddz5JqM?modestbranding=1&rel=0&showinfo=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="right-image">
+                <img src="/assets/love-deram.png" alt="Chocolate Cake" class="decorative-img">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img class="foot-png" src="/assets/Footer.png" alt="" srcset="">
+        <div class="footer-container">
+            <p>© 2024 <span>Layers Bakeshop</span> | Powered by <a href="#">MATZ Solutions</a></p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <img class="foot-png foot2" src="/assets/Footer1.png" alt="" srcset="">
+    </footer>
 </body>
 
 </html>
