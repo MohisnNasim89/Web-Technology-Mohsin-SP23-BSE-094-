@@ -4,25 +4,103 @@
 
 /* Custom Styles for Specific Elements */
 body, html {
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: "Heebo", sans-serif;
+    font-weight: 600;
+    font-size: 14px !important;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-#layer, #bakeshop {
-    font-family: 'FoglihtenNo07', sans-serif;
-    color: rgb(176, 156, 109);
+.location-btn {
+    border: none;
+    font-size: 15px;
+    background-color: #B09C6D;
+    color: #FFF;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 0.75vw;
+    padding-bottom: 0.75em;
+    border-radius: 1.3em;
+    text-decoration: none;
 }
 
-.section-title {
-    font-family: 'FoglihtenNo07', sans-serif;
-    color: rgb(176, 156, 109);
+.navbar-brand img {
+    height: 2.5rem;
 }
 
-.cake-title {
-    font-family: 'FoglihtenNo07', sans-serif;
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-mn
-.price {
-    color: rgb(176, 156, 109);
+
+.navbar {
+    position: sticky;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.5rem;
+}
+
+.menu-left{
+    margin-left: 7rem !important;
+}
+
+.menu-right{
+    margin-right: 7rem !important;
+}
+
+.icon-badge {
+    position: relative;
+}
+
+.icon-badge .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #b59c6c;
+    border-radius: 50%;
+}
+
+.form-control {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.offcanvas-start {
+    width: 300px !important;
+}
+
+.navbar-toggler:focus, 
+  .navbar-toggler:active {
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled):active,
+.navbar-toggler:focus{
+    background-color: transparent;
+}
+
+input::placeholder {
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888888b5;
+}
+
+
+.arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    opacity: 0.4;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
