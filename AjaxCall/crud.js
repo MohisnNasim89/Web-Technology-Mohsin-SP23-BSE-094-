@@ -1,81 +1,153 @@
-function displayUsers() {
+const apiUrl = "https://usmanlive.com/wp-json/api/stories"; // Replace with your API endpoint
+
+// Fetch and display stories
+function displayStories() {
     $.ajax({
-        url: "https://gorest.co.in/public/v2/users",
+        url: apiUrl,
         method: "GET",
         dataType: "json",
-        success: handleResponse,
+        success: function (data) {
+            renderStoryList(data);
+        },
         error: function (error) {
-            console.error("Error Fetching Users", error);
+            console.error("Error fetching stories:", error);
+            alert("Error fetching stories. Check console for details.");
         },
     });
 }
 
-function handleResponse(data) {
-    var users = $("#userList");
-    users.empty();
-    $.each(data, function (index, user) {
-        if (user && user.id) { // Ensure user and user.id exist
-            users.append(`
-                <div class="row mb-4">
-                    <h2 class="fw-bold col-12">USER ${index + 1}</h2>
-                    
-                    <div class="col-4 mb-2">
-                        <h4 class="d-inline">Name:</h4>
-                    </div>
-                    <div class="col-8 mb-2">
-                        <span>${user.name || 'N/A'}</span>
-                    </div>
+// Render the story list in the DOM
+function renderStoryList(data) {
+    const storyList = $("#storyList");
+    storyList.empty();
 
-                    <div class="col-4 mb-2">
-                        <h4 class="d-inline">Email:</h4>
-                    </div>
-                    <div class="col-8 mb-2">
-                        <span>${user.email || 'N/A'}</span>
-                    </div>
+    if (!Array.isArray(data)) {
+        console.error("Invalid data format:", data);
+        return;
+    }
 
-                    <div class="col-4 mb-2">
-                        <h4 class="d-inline">Gender:</h4>
-                    </div>
-                    <div class="col-8 mb-2">
-                        <span>${user.gender || 'N/A'}</span>
-                    </div>
+    data.forEach((story, index) => {
+        const { id, title, content } = story;
 
-                    <div class="col-4 mb-2">
-                        <h4 class="d-inline">Status:</h4>
-                    </div>
-                    <div class="col-8 mb-2">
-                        <span>${user.status || 'N/A'}</span>
-                    </div>
-
-                    <div class="mt-3">
-                        <button class="btn col-md-1 btn-dark me-2 btn-edit" data-id="${user.id}">Edit</button>
-                        <button class="btn col-md-1 btn-danger btn-del" data-id="${user.id}">Delete</button>
-                    </div>
+        storyList.append(`
+            <div class="row mb-4">
+                <h2 class="col-12 fw-bold">Story ${index + 1}</h2>
+                <div class="col-4"><h4>Title:</h4> ${title}</div>
+                <div class="col-8"><h4>Content:</h4> <p>${content}</p></div>
+                <div class="col-12 mt-2">
+                    <button class="btn btn-dark btn-edit" data-id="${id}">Edit</button>
+                    <button class="btn btn-danger btn-delete" data-id="${id}">Delete</button>
                 </div>
-                <hr>
-            `);
-        } else {
-            console.warn(`Invalid user data at index ${index}`, user);
-        }
+            </div>
+            <hr />
+        `);
     });
 }
 
-function deleteStory() {
-    let userId = $(this).attr("data-id");
+// Handle form submission for adding or updating stories
+function handleFormSubmission(event) {
+    event.preventDefault();
+
+    const storyId = $("#createBtn").attr("data-id");
+    const title = $("#enterTitle").val().trim();
+    const content = $("#enterContent").val().trim();
+
+    // Validate inputs
+    if (!title || !content) {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    const storyData = { title, content };
+
+    if (storyId) {
+        // Update existing story
+        $.ajax({
+            url: `${apiUrl}/${storyId}`,
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(storyData),
+            success: function () {
+                displayStories();
+                clearForm();
+            },
+            error: function (error) {
+                console.error("Error updating story:", error);
+                alert("Error updating story. Check console for details.");
+            },
+        });
+    } else {
+        // Add new story
+        $.ajax({
+            url: apiUrl,
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(storyData),
+            success: function () {
+                displayStories();
+                clearForm();
+            },
+            error: function (error) {
+                console.error("Error adding story:", error);
+                alert("Error adding story. Check console for details.");
+            },
+        });
+    }
+}
+
+// Handle story deletion
+function handleDeleteStory() {
+    const storyId = $(this).data("id");
+
     $.ajax({
-        url: "https://gorest.co.in/public/v2/users/" + userId,
+        url: `${apiUrl}/${storyId}`,
         method: "DELETE",
         success: function () {
             displayStories();
         },
         error: function (error) {
             console.error("Error deleting story:", error);
-            console.log(userId);
+            alert("Error deleting story. Check console for details.");
         },
     });
 }
 
+// Handle editing a story
+function handleEditStory() {
+    const storyId = $(this).data("id");
+
+    $.ajax({
+        url: `${apiUrl}/${storyId}`,
+        method: "GET",
+        success: function (story) {
+            const { title, content } = story;
+
+            $("#enterTitle").val(title);
+            $("#enterContent").val(content);
+
+            $("#createBtn").text("Update Story").attr("data-id", storyId);
+            $("#clearBtn").show();
+        },
+        error: function (error) {
+            console.error("Error fetching story:", error);
+            alert("Error fetching story. Check console for details.");
+        },
+    });
+}
+
+// Clear form inputs
+function clearForm() {
+    $("#enterTitle, #enterContent").val("");
+    $("#createBtn").text("Add Story").removeAttr("data-id");
+    $("#clearBtn").hide();
+}
+
+// Initialize event listeners
 $(document).ready(function () {
-    displayUsers();
-    $(document).on("click", ".btn-del", deleteStory);
+    displayStories();
+
+    $("#createForm").submit(handleFormSubmission);
+    $("#clearBtn").click(clearForm);
+    $(document).on("click", ".btn-edit", handleEditStory);
+    $(document).on("click", ".btn-delete", handleDeleteStory);
 });
