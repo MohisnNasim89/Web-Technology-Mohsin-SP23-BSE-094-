@@ -1,0 +1,28 @@
+/* Custom Font Integration */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/foglihtenno07');
+
+/* Custom Styles for Specific Elements */
+body, html {
+    font-family: 'Heebo', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#layer, #bakeshop {
+    font-family: 'FoglihtenNo07', sans-serif;
+    color: rgb(176, 156, 109);
+}
+
+.section-title {
+    font-family: 'FoglihtenNo07', sans-serif;
+    color: rgb(176, 156, 109);
+}
+
+.cake-title {
+    font-family: 'FoglihtenNo07', sans-serif;
+}
+mn
+.price {
+    color: rgb(176, 156, 109);
+}
