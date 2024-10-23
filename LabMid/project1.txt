@@ -1,1 +1,1 @@
-This is the detailed description of Project 1. It involves building a portfolio website using HTML, CSS, and JavaScript.
+A Library Management System is a software application designed to manage and automate library operations, such as cataloging, tracking books, and managing user records. It can be built using languages like Java, Python, and PHP.

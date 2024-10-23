@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,12 +24,12 @@
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-            
+
                     <!-- Brand name -->
                     <div class="navbar-brand br">
                         Mohsin Naseem
                     </div>
-            
+
                     <!-- Centered navigation items -->
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <div class="d-flex align-items-center">
@@ -55,7 +55,7 @@
                             </ul>
                         </div>
                     </div>
-            
+
                     <!-- Search icon moved to the end -->
                     <div class="d-flex align-items-center">
                         <ul class="navbar-nav">
@@ -66,8 +66,9 @@
                     </div>
                 </div>
             </nav>
-        
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-body">
                     <form class="d-flex pb-3 border-bottom">
                         <input class="form-control" type="search" placeholder="Search for products" aria-label="Search">
@@ -75,7 +76,7 @@
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
-        
+
                     <ul class="navbar-nav">
                         <li class="nav-item border-bottom pb-2 pt-2">
                             <a class="nav-link" href="#">Home</a>
@@ -94,9 +95,11 @@
                             </a>
                             <div class="collapse" id="socialMediaDropdown">
                                 <ul class="list-unstyled ps-3">
-                                    <li><a class="nav-link" href="#">Facebook <i class="fa-brands fa-facebook-f ms-4"></i></a>
+                                    <li><a class="nav-link" href="#">Facebook <i
+                                                class="fa-brands fa-facebook-f ms-4"></i></a>
                                     </li>
-                                    <li><a class="nav-link" href="#">Instagram <i class="fa-brands fa-instagram ms-3"></i></a>
+                                    <li><a class="nav-link" href="#">Instagram <i
+                                                class="fa-brands fa-instagram ms-3"></i></a>
                                     </li>
                                     <li><a class="nav-link" href="#">Github <i class="fa-brands fa-github ms-4"></i></a>
                                     </li>
@@ -135,16 +138,18 @@
         <div class="row mt-5">
             <h2 class="text-center fw-bold">My Projects</h2>
             <div class="row mt-5">
-                <div class="row mt-5">
-                    <h2 class="text-center fw-bold">Semester 1 Projects</h2>
+                <div class="row">
+                    <h2 class="text-center fw-bold mb-5">Semester 1 Projects</h2>
                     <!-- Project 1 -->
                     <div class="col-md-6 mb-4">
                         <div class="card h-100 project" data-project="1">
-                            <img src="a07b33114604795.Y3JvcCw4MDgsNjMyLDAsMA.png" class="card-img-top img-fluid" alt="Project Image">
+                            <img src="a07b33114604795.Y3JvcCw4MDgsNjMyLDAsMA.png" class="card-img-top img-fluid"
+                                alt="Project Image">
                             <div class="card-body">
                                 <h5 class="card-title">Library Management System</h5>
                                 <p class="card-text text-muted">
-                                    <span class="company">CANOPY</span> • <span class="role">Back End Dev</span> • <span class="year">2015</span>
+                                    <span class="company">CANOPY</span> • <span class="role">Back End Dev</span> • <span
+                                        class="year">2015</span>
                                 </p>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">JAVA</li>
@@ -155,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- Project 2 -->
                     <div class="col-md-6 mb-4">
                         <div class="card h-100 project" data-project="2">
@@ -163,7 +168,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Online Portfolio</h5>
                                 <p class="card-text text-muted">
-                                    <span class="company">CANOPY</span> • <span class="role">Front End Dev</span> • <span class="year">2016</span>
+                                    <span class="company">CANOPY</span> • <span class="role">Front End Dev</span> •
+                                    <span class="year">2016</span>
                                 </p>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">HTML</li>
@@ -175,12 +181,14 @@
                         </div>
                     </div>
 
-                    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="projectModalLabel">Project Description</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" id="projectDescription">
                                     <!-- The project description will be loaded here -->
@@ -189,118 +197,154 @@
                         </div>
                     </div>
                 </div>
-        
-            <!-- Modal for Project Description -->
-            <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="projectModalLabel">Project Description</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <!-- Modal for Project Description -->
+                <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="projectModalLabel">Project Description</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="projectDescription">
+                                <!-- The project description will be loaded here -->
+                            </div>
                         </div>
-                        <div class="modal-body" id="projectDescription">
-                            <!-- The project description will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Semester 2 Projects -->
+                <div class="row mt-5">
+                    <h2 class="text-center fw-bold mb-5">Semester 2 Projects</h2>
+                    <!-- Project 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 project" data-project="3">
+                            <img src="/LabMid/655868f3eb70b44dfce606c4_646639c76a8d1ad7d73c77ee_thumbnail_Best-Social-Media-Mgmt-for-Creatives.jpeg" class="card-img-top img-fluid"
+                                alt="Project Image">
+                            <div class="card-body">
+                                <h5 class="card-title">E-Commerce Website</h5>
+                                <p class="card-text text-muted">
+                                    <span class="company">CANOPY</span> • <span class="role">Back End Dev</span> • <span
+                                        class="year">2015</span>
+                                </p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">JAVA</li>
+                                    <li class="list-inline-item">JAVA FX</li>
+                                    <li class="list-inline-item">SQL</li>
+                                </ul>
+                                <a href="#" class="see-project" data-project-id="3">See Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 project" data-project="4">
+                            <img src="PersonBg.png" class="card-img-top img-fluid" alt="Project Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Social Media App</h5>
+                                <p class="card-text text-muted">
+                                    <span class="company">CANOPY</span> • <span class="role">Front End Dev</span> •
+                                    <span class="year">2016</span>
+                                </p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">HTML</li>
+                                    <li class="list-inline-item">CSS</li>
+                                    <li class="list-inline-item">JavaScript</li>
+                                </ul>
+                                <a href="#" class="see-project" data-project-id="4">See Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="projectModalLabel">Project Description</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="projectDescription">
+                                    <!-- The project description will be loaded here -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Semester 2 Projects -->
-            <div class="row mt-5">
-                <h2 class="text-center fw-bold">Semester 2 Projects</h2>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="/LabMid/images.jpeg" class="card-img-top img-fluid" alt="Project Image">
-                        <div class="card-body">
-                            <h5 class="card-title">E-Commerce Website</h5>
-                            <p class="card-text text-muted">
-                                <span class="company">CANOPY</span> • <span class="role">Full Stack Dev</span> • <span class="year">2017</span>
-                            </p>
-                            <p class="card-text">A fully functional e-commerce platform with user authentication and payment integration.</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">PHP</li>
-                                <li class="list-inline-item">MySQL</li>
-                                <li class="list-inline-item">JavaScript</li>
-                            </ul>
-                            <a href="#" class="see-project">See Project</a>
-                        </div>
-                    </div>
+
+            <!-- About Section -->
+            <section class="about mt-5">
+                <h2 class="text-center">About Myself</h2>
+                <p class="text-muted text-center">Hello, I’m a software developer! I can help you build a product,
+                    feature or
+                    website. Look through some of my work and experience! If you like what you see and have a project
+                    you need coded, don’t hesitate to contact me.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="resume-button">Get my resume</a>
                 </div>
-            
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="/LabMid/655868f3eb70b44dfce606c4_646639c76a8d1ad7d73c77ee_thumbnail_Best-Social-Media-Mgmt-for-Creatives.jpeg" class="card-img-top img-fluid" alt="Project Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Social Media App</h5>
-                            <p class="card-text text-muted">
-                                <span class="company">CANOPY</span> • <span class="role">Full Stack Dev</span> • <span class="year">2017</span>
-                            </p>
-                            <p class="card-text">A social media platform allowing users to create profiles, share posts, and interact with others.</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">Node.js</li>
-                                <li class="list-inline-item">MongoDB</li>
-                                <li class="list-inline-item">React</li>
-                            </ul>
-                            <a href="#" class="see-project">See Project</a>
-                        </div>
-                    </div>
+            </section>
+
+            <!-- Skills Section -->
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <div class="logo-item"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                            alt="JavaScript" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><i class="fa-brands fa-html5 fa-3x" style="color: #e34c26;"></i></div>
+                    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+                            alt="CSS" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><i class="fa-brands fa-python fa-3x" style="color: #3776AB;"></i></div>
+                    <div class="logo-item"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
+                            alt="C Language" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+                            alt="PHP" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><i class="fa-brands fa-java fa-3x" style="color: #5382A1;"></i></div>
+
+                    <!-- Repeat logos to make the animation smoother -->
+                    <div class="logo-item"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                            alt="JavaScript" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><i class="fa-brands fa-html5 fa-3x" style="color: #e34c26;"></i></div>
+                    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+                            alt="CSS" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><i class="fa-brands fa-python fa-3x" style="color: #3776AB;"></i></div>
+                    <div class="logo-item"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
+                            alt="C Language" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+                            alt="PHP" style="width:50px; height:50px;"></div>
+                    <div class="logo-item"><i class="fa-brands fa-java fa-3x" style="color: #5382A1;"></i></div>
                 </div>
             </div>
-        </div>
 
-        <!-- About Section -->
-        <section class="about mt-5">
-            <h2 class="text-center">About Myself</h2>
-            <p class="text-muted text-center">Hello, I’m a software developer! I can help you build a product, feature or
-                website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
-            </p>
-            <div class="d-flex justify-content-center">
-                <a href="#" class="resume-button">Get my resume</a>
-            </div>
-        </section>
+            <!-- Contact Form -->
+            <div class="contact-form mt-5">
+                <h2 class="Main-Heading text-center">Contact me</h2>
+                <p class="para text-center">If you have an application you are interested in developing, a feature that
+                    you
+                    need built, or a project that needs coding, I'd love to help with it!</p>
 
-        <!-- Skills Section -->
-        <div class="logo-slider">
-            <div class="logo-track">
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><i class="fa-brands fa-html5 fa-3x" style="color: #e34c26;"></i></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><i class="fa-brands fa-python fa-3x" style="color: #3776AB;"></i></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C Language" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><i class="fa-brands fa-java fa-3x" style="color: #5382A1;"></i></div>
-        
-                <!-- Repeat logos to make the animation smoother -->
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><i class="fa-brands fa-html5 fa-3x" style="color: #e34c26;"></i></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><i class="fa-brands fa-python fa-3x" style="color: #3776AB;"></i></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C Language" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP" style="width:50px; height:50px;"></div>
-                <div class="logo-item"><i class="fa-brands fa-java fa-3x" style="color: #5382A1;"></i></div>
+                <form action="https://formspree.io/f/{your-form-id}" method="POST" class="form">
+                    <input type="text" name="name" placeholder="Your Name" class="form-control mb-3" maxlength="30"
+                        required>
+                    <input type="email" name="email" placeholder="Your Email" class="form-control mb-3" required>
+                    <textarea name="message" placeholder="Write your message here..." class="form-control mb-3"
+                        maxlength="500" required></textarea>
+                    <button type="submit" class="btn btn-light w-100">Get in touch</button>
+                </form>
             </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form mt-5">
-            <h2 class="Main-Heading text-center">Contact me</h2>
-            <p class="para text-center">If you have an application you are interested in developing, a feature that you
-                need built, or a project that needs coding, I'd love to help with it!</p>
-
-            <form action="https://formspree.io/f/{your-form-id}" method="POST" class="form">
-                <input type="text" name="name" placeholder="Your Name" class="form-control mb-3" maxlength="30"
-                    required>
-                <input type="email" name="email" placeholder="Your Email" class="form-control mb-3" required>
-                <textarea name="message" placeholder="Write your message here..." class="form-control mb-3"
-                    maxlength="500" required></textarea>
-                <button type="submit" class="btn btn-light w-100">Get in touch</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="ex.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="ex.js"></script>
 </body>
 
 </html>

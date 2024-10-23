@@ -1,0 +1,1 @@
+The Social Media App allows users to create profiles, share posts, and connect with others in a vibrant online community. Developed with Node.js, MongoDB, and React, it emphasizes real-time interactions and dynamic content sharing.

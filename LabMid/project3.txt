@@ -1,0 +1,1 @@
+The E-Commerce Website is a fully functional platform enabling users to browse products, add them to a cart, and complete purchases. Built using PHP, MySQL, and JavaScript, it features user authentication and secure payment integration.
