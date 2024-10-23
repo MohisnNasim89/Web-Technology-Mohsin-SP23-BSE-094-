@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Sen:wght@400..800&display=swap');
+
+*{
+    font-family: "Sen", serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-brand img {
+    height: 2.5rem;
+}
+
+.navbar-brand {
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+.nav1{
+    background-color: rgb(133, 133, 133);
+}
+
+.navbar {
+    position: sticky;
+    padding: 10px 25px;
+    z-index: 10000;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+}
+
+.icon-badge {
+    position: relative;
+}
+
+.icon-badge .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #B09C6D;
+    color: white;
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+.form-control {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.offcanvas-start {
+    width: 300px !important;
+}
+
+.navbar-toggler:focus, 
+  .navbar-toggler:active {
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled):active,
+.navbar-toggler:focus{
+    background-color: transparent;
+}
+
+input::placeholder {
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888888b5;
+}
+
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    opacity: 0.4;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+}
+
+.br{
+    color: #f8f9fa;
+}
+
+.offcanvas-body {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 1199px) {
+    .navbar-collapse {
+        justify-content: space-around;
+    }
+}
+
+.pic {
+    background-image: url('pic1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 300px;
+}
+
+.inner-content {
+    font-size: 50px;
+    font-weight: bold;
+    color: #142850;
+}
+
+.connect {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.social-icons span {
+    cursor: pointer;
+}
+
+.see-project {
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.see-project:hover {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.resume-button {
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #007bff;
+    color: #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.contact-form {
+    background-color: #000000;
+    color: white;
+    padding: 40px;
+}
+
+body {
+    padding-top: 50px; /* Adjust based on the height of your navbar */
+}
+
+.navbar {
+    z-index: 1000; /* Ensure navbar stays on top */
+    background-color: rgba(0, 0, 0, 0.8); /* Add transparency if needed */
+}
+
+.pic {
+    position: relative;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/LabMid/img05.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Set opacity of the background image */
+    z-index: 1; /* Make sure it sits behind the content */
+}
+
+.pic .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Ensure overlay content is above the background image */
+}
+
+.pic h1,
+.pic p,
+.pic .connect {
+    color: rgb(0, 0, 0); /* Set text color */
+    opacity: 1; /* Ensure text remains fully opaque */
+}
+.card-img-top {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: 100%; /* Ensures the image takes the full height of the card */
+    object-fit: cover; /* Maintains aspect ratio while covering the card */
+}
+
+
+.category-list li:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.category-list strong {
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.category-list li span {
+    color: #555;
+}
+
+.logo-slider {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+/* Flexbox to arrange the items in a row */
+.logo-track {
+    display: flex;
+    width: calc(100% * 2); /* To ensure smooth looping */
+    animation: scroll 15s linear infinite;
+}
+
+.logo-item {
+    flex: 0 0 auto; /* Prevents shrinking or growing */
+    padding: 0 30px; /* Space between logos */
+}
+
+/* Keyframes for infinite scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start from the original position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move left by half the width */
+    }
+}

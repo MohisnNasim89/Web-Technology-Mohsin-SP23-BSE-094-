@@ -1,0 +1,1 @@
+This is the detailed description of Project 1. It involves building a portfolio website using HTML, CSS, and JavaScript.

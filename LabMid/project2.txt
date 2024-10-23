@@ -1,0 +1,1 @@
+This is the detailed description of Project 2. It is a project based on creating a simple to-do list using vanilla JavaScript.
