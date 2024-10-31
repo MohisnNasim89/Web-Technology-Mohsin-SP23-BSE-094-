@@ -1,8 +1,5 @@
-// hello
+const apiUrl = "https://usmanlive.com/wp-json/api/stories";
 
-const apiUrl = "https://usmanlive.com/wp-json/api/stories"; // Replace with your API endpoint
-
-// Fetch and display stories
 function displayStories() {
     $.ajax({
         url: apiUrl,
@@ -18,7 +15,6 @@ function displayStories() {
     });
 }
 
-// Render the story list in the DOM
 function renderStoryList(data) {
     const storyList = $("#storyList");
     storyList.empty();
