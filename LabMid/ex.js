@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const projectId = this.getAttribute('data-project-id');
 
-            // AJAX request to fetch the project description
             $.ajax({
                 url: `project${projectId}.txt`,
                 type: 'GET',
