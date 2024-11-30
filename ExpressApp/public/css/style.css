@@ -251,7 +251,7 @@ input::placeholder {
     height: 100px;
 }
 
-.cart-section button {
+.cart-section a {
     background-color: #d1aa6e;
     border: none;
     color: white;
@@ -262,7 +262,7 @@ input::placeholder {
     transition: background-color 0.3s ease;
 }
 
-.cart-section button:hover {
+.cart-section a:hover {
     background-color: #b08852;
 }
 
