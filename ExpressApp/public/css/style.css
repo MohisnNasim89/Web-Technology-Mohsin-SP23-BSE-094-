@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/foglihtenno07');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Parkinsans:wght@300..800&family=Sen:wght@400..800&display=swap');
+
+body, html {
+    font-family: "Heebo", sans-serif;
+    font-weight: 600;
+    font-size: 14px !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.location-btn {
+    border: none;
+    font-size: 1rem;
+    background-color: #B09C6D;
+    color: #FFF;
+    padding: 12px 40px;
+    border-radius: 1.3em;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    height: 2.5rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0; /* Ensure the navbar stays at the top of the page */
+    z-index: 1000; /* Make sure it's above other content */
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link i{
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link{
+    font-size: 1rem;
+}
+
+.icon-badge{
+    position: relative;
+}
+
+.icon-badge .badge{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #B09C6D;
+    color: white;
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+.cart-icon i {
+    font-size: 1.5rem; /* Same size across breakpoints */
+    line-height: 1; /* Ensure consistent spacing */
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #B09C6D;
+    color: white;
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+.form-control {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.offcanvas-start {
+    width: 300px !important;
+}
+
+.navbar-toggler:focus, 
+  .navbar-toggler:active {
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled):active,
+.navbar-toggler:focus{
+    background-color: transparent;
+}
+
+input::placeholder {
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888888b5;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    opacity: 0.4;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+}
+
+.offcanvas {
+    z-index: 1055; /* Ensures offcanvas appears above navbar */
+}
+
+.navbar {
+    z-index: 1040; /* Keeps navbar under the offcanvas */
+}
+
+.offcanvas-body {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 1199px) {
+    .navbar-collapse {
+        justify-content: space-around;
+    }
+}
+
+
+/* Styling for the title */
+.menu-section {
+    background-image: url('/assets/Title-4.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Add padding for spacing */
+    color: white; /* Text color */
+    text-align: center;
+}
+
+/* Styling for the title */
+.menu-title {
+    font-family: 'foglihtenno07', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    margin: 10px 5px; /* Reduced the margin between items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-content {
+    text-align: center;
+}
+
+.menu-item-img {
+    width: 30px; /* Set a fixed size for all images */
+    height: 30px; /* Ensures all images are the same size */
+    object-fit: cover; /* Ensures the image fits without distortion */
+}
+
+.menu-item-text {
+    display: block;
+}
+
+.menu-item-text span {
+    display: block;
+}
+
+.product-count {
+    font-size: 0.9rem;
+    color: #e1e1e1;
+}
+
+.menu-item {
+    transition: all 0.3s ease-in-out; 
+}
+
+.menu-item:hover {
+    filter: drop-shadow(0 0 10px rgb(216, 215, 204)); 
+    transform: scale(1.05); 
+}
+
+.menu-item:hover .menu-item-text span {
+    color: #ffffff; 
+}
+@media (max-width: 576px) {
+    .menu-item {
+        flex-direction: column;
+    }
+
+    .menu-item-img {
+        margin-bottom: 5px;
+    }
+}
+
+/* Ensure that when zoomed in, items can move to the next row */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        flex-basis: 100%; /* This will make items move to next row on zoom or small screens */
+        max-width: 100%;
+    }
+}
+
+
+ /* Cart Section */
+ .cart-section {
+    background-color: #fff; /* Matches the clean and minimalistic feel */
+    border: 1px solid #ddd; /* Subtle border for separation */
+    border-radius: 5px; /* Smooth edges for better aesthetics */
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+}
+
+.cart-section h4 {
+    font-family: "Parkinsans", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.cart-section img {
+    margin: 20px auto;
+    display: block;
+    width: 100px; /* Ensures uniform size */
+    height: 100px;
+}
+
+.cart-section a {
+    background-color: #d1aa6e;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-section a:hover {
+    background-color: #b08852;
+}
+
+.cart-footer {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.cart-footer .highlight {
+    color: #d1aa6e;
+    font-weight: bold;
+}
+
+
+/* Content Section */
+.content-section {
+    padding: 20px;
+}
+
+.sort {
+    background-color: transparent;
+    padding: 0;
+}
+
+
+/* Filter Section */
+.filter-section {
+    background-color: #fff;
+    padding: 3rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.location-selector input,
+.location-selector select {
+    margin-right: 10px;
+}
+
+.sorting-options span {
+    margin-right: 5px;
+}
+
+.sorting-options select {
+    margin-right: 10px;
+}
+
+/* General Adjustments */
+.breadcrumb {
+    margin-bottom: 0;
+    background-color: transparent;
+    padding: 0;
+}
+
+.sorting-options select,
+.sorting-options span {
+    margin-bottom: 0;
+}
+
+
+/* Card Styles */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+/* Image Styling */
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Align Captions Left */
+.product-card .card-title,
+.product-card .text-muted,
+.product-card .card-text,
+.product-card .price {
+    text-align: left;
+}
+
+.card-title{
+    font-family: 'foglihtenno07', sans-serif;
+    font-weight: 600;  
+    font-size: 1.5rem;
+}
+
+.card-title:hover{
+    color: #B09C6D;
+}
+
+/* Flexbox for Card Body */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Price and Button Styling */
+.price {
+    color: #d1aa6e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center !important;
+}
+
+/* Quantity Button Styles */
+.qty-btn {
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.qty-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.qty-input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #d1aa6e;
+    border: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #dbac6e;
+    color: white;
+}
+
+/* Ensuring Same Height for Cards */
+.h-100 {
+    height: 100%;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    color: #7c6c50;
+}
+
+/* Text and Links */
+.footer-container p {
+    font-size: 16px;
+    margin: 0;
+    color: #7b7b7b;
+}
+
+.footer-container span {
+    color: #b09c6d;
+    font-weight: 500;
+}
+
+.footer-container a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons a {
+    font-size: 25px;
+    color: #7c6c50;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #be9e56;
+}
+
+/* Decorative Images */
+.foot2 {
+    bottom: -30px;
+}
+
+/* Utility Class for Text Color */
+.text-brown {
+    color: #7c6c50;
+}

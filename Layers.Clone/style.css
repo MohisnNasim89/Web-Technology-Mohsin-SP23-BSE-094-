@@ -795,7 +795,7 @@ footer {
     color: #be9e56;
 }
 
-/* footer::before {
+footer::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -806,4 +806,4 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
-} */
+}
