@@ -1,0 +1,60 @@
+<div class="allCons container crp">
+    <h2 class="text-center mb-4 fw-bold">Create New Product</h2>
+
+    <!-- Form -->
+    <form action="/admin/products/create" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()" class="bg-white shadow p-4 rounded">
+        <!-- Title -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control border-1" id="title" name="title"/>
+            <div class="text-danger error-message">*Please enter a valid title (3-100 characters)</div>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+            <div class="text-danger error-message">*Please enter a valid description (10-500 characters)</div>
+        </div>
+
+        <!-- Category -->
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" id="category" name="category">
+                <option value="">Select a category</option>
+                <option value="Cakes">Cakes</option>
+                <option value="Cookies">Cookies</option>
+                <option value="Sundae">Sundae</option>
+                <option value="Cupcakes">Cupcakes</option>
+            </select>
+            <div class="text-danger error-message">*Please select a category</div>
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price"/>
+            <div class="text-danger error-message">*Please enter a valid price (greater than 0)</div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity"/>
+            <div class="text-danger error-message">*Please enter a valid quantity (greater than 0)</div>
+        </div>
+
+        <!-- File Upload -->
+        <div class="mb-3">
+            <label for="file" class="form-label">Product Image</label>
+            <input type="file" class="form-control" id="file" name="file" accept="image/*" />
+            <div class="text-danger error-message">*Please upload a valid image (JPEG, JPG, PNG)</div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary w-100">Create Product</button>
+    </form>
+</div>
+
+<!-- Validation Script -->
+<script src="/js/createFormValidation.js"></script>

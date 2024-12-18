@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/foglihtenno07');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Sen:wght@400..800&display=swap');
+
+body, html {
+    font-family: "Sen" !important;
+}
+
+.allCon{
+    margin-top: 6rem;
+    min-height: 30rem;
+}
+
+/* .pagination{
+    margin-left: 40%;
+    margin-right: 50%;
+} */
+.error {
+    border-color: red !important;
+    box-shadow: 0 0 5px red !important;
+}
+
+.text-danger {
+    font-size: 0.9em;
+}
+
+.error-message {
+    display: none;
+}
+
+.crp{
+    margin-top: 5rem;
+}
+
+.al{
+    min-height: 20rem !important;
+}
+
+.button{
+    background-color: #B09C6D;
+    border: none;
+    color: white;
+    padding: 3px 20px 3px 20px ;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button:hover{
+    background-color: #b09c6da5;
+}
+
+.item{
+    margin-top: 3rem !important;
+}
+
+.product-card{
+    height: 35rem !important;
+    width: 25rem !important;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
