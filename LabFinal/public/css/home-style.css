@@ -338,3 +338,27 @@ input::placeholder {
     font-weight: 600;
     color: rgb(176, 156, 109);
 }
+
+.allCon{
+    margin-top: 6rem !important;
+    min-height: 30rem !important;
+}
+
+.crp{
+    margin-top: 5rem;
+}
+
+.button{
+    background-color: #B09C6D;
+    border: none;
+    color: white;
+    padding: 3px 20px 3px 20px ;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button:hover{
+    background-color: #b09c6da5;
+}

@@ -1,0 +1,39 @@
+<div class="allCons container crp">
+    <h2 class="text-center mb-4 fw-bold">All Orders</h2>
+
+    <!-- Orders Table -->
+    <table class="table table-bordered bg-white shadow p-4 rounded">
+        <thead class="thead-dark">
+            <tr>
+                <th>Products</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% orders.forEach(order => { %>
+                <tr>
+                    <td>
+                        <ul>
+                            <% order.products.forEach(p => { %>
+                                <li>
+                                    <%= p.product.name %> (x<%= p.quantity %>): $<%= p.product.price * p.quantity %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </td>
+                    <td>$<%= order.totalPrice %></td>
+                    <td><%= order.status %></td>
+                    <td>
+                        <% if (order.status === 'Pending') { %>
+                            <form action="/orders/admin/orders/<%= order._id %>/complete" method="POST">
+                                <button type="submit" class="btn btn-primary">Complete Order</button>
+                            </form>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>

@@ -8,7 +8,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
             <!-- Centered Logo for smaller screens -->
             <div class="navbar-brand mx-auto d-xl-none">
                 <a href="/"><img src="/assets/Layers-Logo.png" alt="Layers Bakeshop Logo"></a>
@@ -52,14 +51,14 @@
                             <a class="nav-link" href="/SocialMedia">Social Media <i class="arrow down"></i></a>
                         </li>
                         <li class="nav-item ms-3">
-                            <a class="nav-link" href="/Orders">Orders</a>
+                            <a class="nav-link" href="/orders/user/orders">Orders</a>
                         </li>
                         <li class="nav-item ms-3">
                             <a class="nav-link" href="/ContactUs">Contact Us</a>
                         </li>
                     </ul>
 
-                    <!-- Icons (Search, User, Heart, Cart) -->
+                    <!-- Icons (Search, User, Heart, Cart, Logout) -->
                     <ul class="navbar-nav ms-4">
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -71,7 +70,6 @@
                             <a class="nav-link" href="#"><i class="far fa-heart fa-lg"></i></a>
                             <span class="badge">0</span>
                         </li>
-                        <!-- Cart Icon with Offcanvas Trigger -->
                         <li class="nav-item icon-badge ms-2">
                             <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
                                 aria-controls="offcanvasCart">
@@ -79,6 +77,12 @@
                             </a>
                             <span class="badge">0</span>
                         </li>
+                        <!-- Logout Button -->
+                        <form action="/logout" method="GET">
+                            <button type="submit" class="btn btn-primary ms-3">
+                              <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </form>
                     </ul>
                 </div>
             </div>
@@ -88,7 +92,6 @@
     <!-- Offcanvas (for smaller screens) -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel">
-
         <div class="offcanvas-body">
             <!-- Search Form -->
             <form class="d-flex pb-3 border-bottom">
@@ -117,12 +120,9 @@
                     </a>
                     <div class="collapse" id="socialMediaDropdown">
                         <ul class="list-unstyled ps-3">
-                            <li><a class="nav-link" href="#">Facebook <i
-                                        class="fa-brands fa-facebook-f ms-4"></i></a></li>
-                            <li><a class="nav-link" href="#">Instagram <i
-                                        class="fa-brands fa-instagram ms-3"></i></a></li>
-                            <li><a class="nav-link" href="#">YouTube <i class="fa-brands fa-youtube ms-4"></i></a>
-                            </li>
+                            <li><a class="nav-link" href="#">Facebook <i class="fa-brands fa-facebook-f ms-4"></i></a></li>
+                            <li><a class="nav-link" href="#">Instagram <i class="fa-brands fa-instagram ms-3"></i></a></li>
+                            <li><a class="nav-link" href="#">YouTube <i class="fa-brands fa-youtube ms-4"></i></a></li>
                         </ul>
                     </div>
                 </li>
@@ -141,6 +141,12 @@
                 <li class="nav-item border-bottom pb-2 pt-2">
                     <a class="nav-link" href="#"><i class="fas fa-user"></i> Login/Register</a>
                 </li>
+                <!-- Logout Button in Offcanvas -->
+                <form action="/logout" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                  </form>
             </ul>
         </div>
     </div>

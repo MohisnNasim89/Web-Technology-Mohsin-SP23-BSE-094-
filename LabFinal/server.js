@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 const { isLoggedIn, isAdmin, isUser } = require('./middlewares/authMiddleware');
 
@@ -38,6 +39,7 @@ app.use(authRoutes);
 app.use('/products', isLoggedIn, productRoutes); // Menu routes
 app.use('/cart', isLoggedIn, cartRoutes); // Cart routes
 app.use('/admin', isLoggedIn, isAdmin, adminRoutes); // Admin routes
+app.use('/orders', isLoggedIn, orderRoutes);
 
 // Root Route
 app.get("/", (req, res) => {

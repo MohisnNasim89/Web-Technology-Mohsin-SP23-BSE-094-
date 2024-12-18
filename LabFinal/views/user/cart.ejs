@@ -38,8 +38,11 @@
             </div>
             <% if (totalPrice > 1000) { %>
                 <div class="cart-footer">
-                    <button class="btn btn-success w-100 mt-3 mb-5">Checkout</button>
-                </div>
+                    <form action="/orders/checkout" method="GET" class="w-100 mt-3 mb-5">
+                      <button type="submit" class="btn btn-success w-100">Checkout</button>
+                    </form>
+                  </div>
+                  
             <% }  else { %>
                 <div class="cart-footer">
                     <p class="mb-2">Minimum order required: <span class="highlight">Rs 1,000</span></p>

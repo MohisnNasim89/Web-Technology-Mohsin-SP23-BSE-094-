@@ -16,3 +16,4 @@ exports.getAllProductsForMenu = async (req, res) => {
         res.status(500).send("Error fetching products for menu");
     }
 };
+

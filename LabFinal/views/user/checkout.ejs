@@ -1,0 +1,55 @@
+<div class="allCons container crp">
+    <h2 class="text-center mb-4 fw-bold">Checkout</h2>
+
+    <!-- Checkout Form -->
+    <form action="/orders/checkout" method="POST" class="bg-white shadow p-4 rounded">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cart.forEach(item => { %>
+                    <tr>
+                        <td><%= products.find(p => p._id.toString() === item.productId.toString()).title %></td>
+                        <td>$<%= products.find(p => p._id.toString() === item.productId.toString()).price %></td>
+                        <td><%= item.quantity %></td>
+                        <td>$<%= products.find(p => p._id.toString() === item.productId.toString()).price * item.quantity %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <!-- Total Amount -->
+        <div class="mb-3">
+            <label for="total" class="form-label">Total Amount</label>
+            <input type="text" class="form-control" id="total" name="totalAmount" value="<%= totalPrice %>" readonly />
+        </div>
+
+        <!-- Shipping Address -->
+        <div class="mb-3">
+            <label for="address" class="form-label">Shipping Address</label>
+            <textarea class="form-control" id="address" name="address" placeholder="Enter your shipping address" required></textarea>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="mb-3">
+            <label for="payment" class="form-label">Payment Method</label>
+            <select class="form-select" id="payment" name="paymentMethod" required>
+                <option value="">Select a payment method</option>
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary w-100 mt-3">Confirm Order</button>
+    </form>
+</div>
+
+<!-- Validation Script (Optional) -->
+<script src="/js/checkoutFormValidation.js"></script>
