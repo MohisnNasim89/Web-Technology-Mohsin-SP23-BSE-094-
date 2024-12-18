@@ -1,0 +1,147 @@
+<section class="fixed-top">
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <!-- Toggler button for smaller screens -->
+            <button class="navbar-toggler d-xl-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Centered Logo for smaller screens -->
+            <div class="navbar-brand mx-auto d-xl-none">
+                <a href="/"><img src="/assets/Layers-Logo.png" alt="Layers Bakeshop Logo"></a>
+            </div>
+
+            <div class="nav-item icon-badge ms-2 d-xl-none cart-icon">
+                <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                    aria-controls="offcanvasCart">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <span class="badge">0</span>
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <!-- Left Section -->
+                <div class="d-flex align-items-center">
+                    <button class="location-btn d-none d-sm-inline-block">Lahore - DHA Phase 5</button>
+                    <ul class="navbar-nav ms-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home <i class="arrow down"></i></a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="/products/menu">Menu <i class="arrow down"></i></a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="/admin/admin">Admin Panel<i class="arrow down"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Centered Logo (visible on larger screens) -->
+                <div class="navbar-brand mx-auto d-none d-xl-block">
+                    <a href="/"><img src="/assets/Layers-Logo.png" alt="Layers Bakeshop Logo"></a>
+                </div>
+
+                <!-- Right Section -->
+                <div class="d-flex align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-4">
+                            <a class="nav-link" href="/SocialMedia">Social Media <i class="arrow down"></i></a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="/Orders">Orders</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="/ContactUs">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Icons (Search, User, Heart, Cart) -->
+                    <ul class="navbar-nav ms-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-lg"></i></a>
+                        </li>
+                        <li class="nav-item icon-badge ms-2">
+                            <a class="nav-link" href="#"><i class="far fa-heart fa-lg"></i></a>
+                            <span class="badge">0</span>
+                        </li>
+                        <!-- Cart Icon with Offcanvas Trigger -->
+                        <li class="nav-item icon-badge ms-2">
+                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                                aria-controls="offcanvasCart">
+                                <i class="fas fa-shopping-cart fa-lg"></i>
+                            </a>
+                            <span class="badge">0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas (for smaller screens) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <div class="offcanvas-body">
+            <!-- Search Form -->
+            <form class="d-flex pb-3 border-bottom">
+                <input class="form-control" type="search" placeholder="Search for products" aria-label="Search">
+                <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!-- Offcanvas Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="products/menu">Menu</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="/AboutUs">About Us</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="/SocialMedia"
+                        data-bs-toggle="collapse" data-bs-target="#socialMediaDropdown" aria-expanded="false">
+                        <span>Social Media</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <div class="collapse" id="socialMediaDropdown">
+                        <ul class="list-unstyled ps-3">
+                            <li><a class="nav-link" href="#">Facebook <i
+                                        class="fa-brands fa-facebook-f ms-4"></i></a></li>
+                            <li><a class="nav-link" href="#">Instagram <i
+                                        class="fa-brands fa-instagram ms-3"></i></a></li>
+                            <li><a class="nav-link" href="#">YouTube <i class="fa-brands fa-youtube ms-4"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="/homepage">Video Catalogue</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="#">Track Order</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="#"><i class="far fa-heart"></i> Wishlist</a>
+                </li>
+                <li class="nav-item border-bottom pb-2 pt-2">
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Login/Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

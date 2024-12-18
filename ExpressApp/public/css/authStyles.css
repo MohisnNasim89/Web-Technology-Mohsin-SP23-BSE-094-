@@ -1,0 +1,80 @@
+body {
+    background: url('/assets/Mob-1.jpg') no-repeat fixed;
+    background-size: cover;
+    font-family: 'Sen', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+}
+.btn-gradient {
+    background: linear-gradient(to right, #B09C6D, #c3b38c);
+    color: white;
+    border-radius: 20px;
+}
+.btn-gradient:hover {
+    background: linear-gradient(to right, #9d8b61, #bcb39b);
+    color: white;
+}
+.social-icons a, .a-sign, .a-login{
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #000;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #a9925b;
+}
+
+.a-sign:hover , .a-login:hover{
+    color: #a9925b;
+}
+
+.form-box .role-selector {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.role-selector input[type="radio"] {
+    display: none;
+}
+
+.role-selector label {
+    width: 48%;
+    text-align: center;
+    padding: 5px;
+    margin: 0 1%;
+    background-color: #f0f0f0;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.role-selector input[type="radio"]:checked + label {
+    background-color: #B09C6D;
+    color: #fff;
+    border-color: #B09C6D;
+}

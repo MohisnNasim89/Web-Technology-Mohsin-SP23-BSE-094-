@@ -1,0 +1,114 @@
+<!--CART PARTIAL HERE-->
+<div class="col-12 col-lg-4 mt-5 canvas-cart">
+    <div class="cart-section d-flex flex-column align-items-center text-center o-cart">
+        <h1 class="text-center mb-4">Cart</h1>
+        <% if (cartItems.length > 0) { %>
+            <% cartItems.forEach(item => { %>
+                <div class="row mt-3">
+                    <div class="cart-section">
+                        <div class="row align-items-center cart-item">
+                            <div class="col-md-4 text-center">
+                                <img src="/uploads/<%= item.picture %>" alt="<%= item.title %>" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="mb-3"><%= item.title %></h4>
+                                <p>Category: <span class="text-muted"><%= item.category %></span></p>
+                                <p>Price: <span class="highlight">Rs <%= item.price %></span></p>
+                                <div class="d-flex justify-content-center align-items-center mt-3">
+                                    <button class="qty-btn decrement" data-product-id="<%= item._id %>">-</button>
+                                    <input type="text" value="<%= item.quantity %>" class="qty-input text-center mx-2" data-product-id="<%= item._id %>">
+                                    <button class="qty-btn increment" data-product-id="<%= item._id %>">+</button>
+                                </div>
+                                <form action="/cart/remove" method="POST" class="mt-3 remove-form" data-product-id="<%= item._id %>">
+                                    <input type="hidden" name="productId" value="<%= item._id %>">
+                                    <button type="submit" class="btn btn-danger remove-btn">Remove</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <div class="row mt-4">
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <h4>Total Price: Rs <span class="highlight total-price"><%= totalPrice %></span></h4>
+                    </div>
+                </div>                
+            </div>
+            <% if (totalPrice > 1000) { %>
+                <div class="cart-footer">
+                    <button class="btn btn-success w-100 mt-3 mb-5">Checkout</button>
+                </div>
+            <% }  else { %>
+                <div class="cart-footer">
+                    <p class="mb-2">Minimum order required: <span class="highlight">Rs 1,000</span></p>
+                </div>
+            <% } %>
+
+        <% } else { %>
+            <div class="text-center">
+                <div class="mb-3">Your cart is empty.</div>
+                <a href="/" class="btn btn-primary mb-3">Return to Shop</a>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+   
+
+<!-- Offcanvas Cart -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header align-items-center justify-content-center off-cart-heading">
+        <h2 class="text-center mt-3" id="offcanvasCartLabel">Cart</h2>
+        <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="cart-section off-cart-section">
+            <% if (cartItems.length >= 0) { %>
+                <% if (cartItems.length > 0) { %>
+                    <% cartItems.forEach(item => { %>
+                        <div class="row mb-4 align-items-center justify-content-center d-flex mt-3">
+                            <div class="col-4 text-center">
+                                <img src="/uploads/<%= item.picture %>" alt="<%= item.title %>" class="img-fluid rounded">
+                            </div>
+                            <div class="col-8 off-can">
+                                <h5 class="mb-2 text-center"><%= item.title %></h5>
+                                <p class="text-muted mb-2 text-center">Category: <%= item.category %></p>
+                                <p class="text-center mb-2">Price: Rs <span class="highlight"><%= item.price %></span></p>
+                                <div class="d-flex justify-content-center align-items-center mt-3">
+                                    <button class="qty-btn decrement" data-product-id="<%= item._id %>">-</button>
+                                    <input type="text" value="<%= item.quantity %>" class="qty-input text-center mx-2" data-product-id="<%= item._id %>">
+                                    <button class="qty-btn increment" data-product-id="<%= item._id %>">+</button>
+                                </div>
+                                <form action="/cart/remove" method="POST" class="mt-3 remove-form" data-product-id="<%= item._id %>">
+                                    <input type="hidden" name="productId" value="<%= item._id %>">
+                                    <button type="submit" class="btn btn-danger remove-btn">Remove</button>
+                                </form>
+                            </div>
+                        </div>
+                    <% }) %>
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <h4>Total Price: Rs <span class="highlight total-price"><%= totalPrice %></span></h4>
+                        </div>
+                    </div>                    
+                    <% if (totalPrice > 1000) { %>
+                        <div class="cart-footer">
+                            <button class="btn btn-success w-100 mt-3 mb-5">Checkout</button>
+                        </div>
+                    <% }  else { %>
+                        <div class="cart-footer">
+                            <p class="mb-2">Minimum order required: <span class="highlight">Rs 1,000</span></p>
+                        </div>
+                    <% } %>
+                <% } else { %>
+                        <div class="text-center">
+                            <div class="mb-3">Your cart is empty.</div>
+                            <a href="/" class="btn btn-primary mb-3">Return to Shop</a>
+                        </div>
+                <% } %>
+            <% }; %>
+        </div>
+    </div>
+</div>
