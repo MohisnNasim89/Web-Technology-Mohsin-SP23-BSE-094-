@@ -99,7 +99,8 @@ exports.completeOrder = async (req, res) => {
 
         order.status = 'Completed';
         await order.save();
-        res.send('Order marked as completed');
+        // res.send('Order marked as completed');
+        res.redirect('/orders/admin/orders');
     } catch (err) {
         console.error('Failed to complete order:', err);
         res.status(500).send('Failed to complete order');
