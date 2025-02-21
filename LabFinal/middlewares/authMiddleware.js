@@ -2,21 +2,21 @@ const isLoggedIn = (req, res, next) => {
     if (!req.session.user) {
         return res.redirect('/login'); 
     }
-    next(); // Proceed if authenticated
+    next(); 
 };
 
 const isAdmin = (req, res, next) => {
     if (!req.session.user || req.session.user.role !== 'admin') {
-        return res.redirect('/login'); // Redirect to login if not an admin
+        return res.redirect('/login'); 
     }
-    next(); // Proceed if admin
+    next();
 };
 
 const isUser = (req, res, next) => {
     if (!req.session.user || req.session.user.role !== 'client') {
-        return res.redirect('/login'); // Redirect to login if not a client
+        return res.redirect('/login'); 
     }
-    next(); // Proceed if user
+    next(); 
 };
 
 module.exports = { isLoggedIn, isAdmin, isUser };

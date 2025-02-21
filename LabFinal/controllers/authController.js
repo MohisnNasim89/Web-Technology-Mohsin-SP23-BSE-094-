@@ -47,8 +47,7 @@ exports.loginUser = async (req, res) => {
         if (!match) {
             return res.render('auth/login', { error: 'Invalid credentials', layout: "authLayout" });
         }
-
-        // Save user data in session
+        
         req.session.user = {
             id: user._id,
             username: user.username,

@@ -23,6 +23,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false },
+    cookie:{
+        maxage: 30*60*1000,
+    }
 }));
 
 // Set View Engine

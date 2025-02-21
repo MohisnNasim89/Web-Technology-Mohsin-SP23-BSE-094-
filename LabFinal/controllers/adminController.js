@@ -13,24 +13,23 @@ exports.upload = upload;
 
 exports.getAllProducts = async (req, res) => {
     try {
-        const page = req.query.page ? Number(req.query.page) : 1; // Read page from query
+        const page = req.query.page ? Number(req.query.page) : 1; 
         const pageSize = 3;
 
         const { category, sort, search } = req.query;
 
         const query = {};
         if (category) {
-            query.category = category; // Filter by category
+            query.category = category; 
         }
         if (search) {
-            query.title = { $regex: search, $options: "i" }; // Case-insensitive search
+            query.title = { $regex: search, $options: "i" }; 
         }
 
         let sortQuery = {};
         if (sort === "asc") sortQuery.price = 1;
         else if (sort === "desc") sortQuery.price = -1;
 
-        // Total records for pagination
         const totalRecords = await Product.countDocuments(query);
         const totalPages = Math.ceil(totalRecords / pageSize);
 
